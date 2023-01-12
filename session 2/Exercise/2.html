@@ -9,7 +9,7 @@
   <body></body>
   <script>
     var myArray = [1, 2, 3, 5, 4, 2, 6, 4];
-    var sortArray = myArray.filter((v, i, a) => a.indexOf(v) === i);
+    var sortArray = myArray.filter((value, index, self) => self.indexOf(value) === index);
     console.log(sortArray);
   </script>
 </html>
