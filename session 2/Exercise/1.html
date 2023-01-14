@@ -7,12 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <div>Enter a string: </div>
-    <input type="text"> 
+    <div>Enter a string:</div>
+    <input type="text" id="string" />
+    <button id="button">Reverse</button>
+    <div id="reverse"></div>
   </body>
   <script>
-    function reverseString(str) {
-      return str.split("").reverse().join("");
-    }
+    let button = document.getElementById("button");
+    button.addEventListener("click", function () {
+      let string = document.getElementById("string").value;
+      let reverse = document.getElementById("reverse");
+      function reverseString(str) {
+        return str.split("").reverse().join("");
+      }
+      reverse.innerHTML = `Reverse: ${reverseString(string)}`;
+    });
   </script>
 </html>
